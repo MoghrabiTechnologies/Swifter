@@ -119,6 +119,7 @@ public class Swifter {
     private var storedSession: Any?
     @available(macOS 10.15, *)
     @available(iOS 13.0, *)
+    @available(watchOS 6.2, *)
     internal var session: ASWebAuthenticationSession? {
         get { return storedSession as? ASWebAuthenticationSession }
         set { storedSession = newValue as Any }
