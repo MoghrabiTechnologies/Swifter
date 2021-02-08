@@ -31,7 +31,7 @@ import Accounts
 
 public class Credential {
     
-    public struct OAuthAccessToken {
+    public struct OAuthAccessToken: Codable {
         
         public internal(set) var key: String
         public internal(set) var secret: String
