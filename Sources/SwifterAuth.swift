@@ -269,7 +269,7 @@ public extension Swifter {
         }
     }
 
-    private func postOAuthAccessTokenHelper(
+    func postOAuthAccessTokenHelper(
         requestToken token: Credential.OAuthAccessToken,
         responseURL: URL,
         success: TokenSuccessHandler?,
