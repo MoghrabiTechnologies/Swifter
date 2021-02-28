@@ -224,7 +224,7 @@ public class Swifter {
     }
     
     @discardableResult
-    internal func getJSON(path: String,
+    public func getJSON(path: String,
                           baseURL: TwitterURL,
                           parameters: [String: Any],
                           uploadProgress: HTTPRequest.UploadProgressHandler? = nil,
@@ -237,7 +237,7 @@ public class Swifter {
     }
     
     @discardableResult
-    internal func postJSON(path: String,
+    public func postJSON(path: String,
                            baseURL: TwitterURL,
                            parameters: [String: Any],
                            uploadProgress: HTTPRequest.UploadProgressHandler? = nil,
@@ -250,7 +250,7 @@ public class Swifter {
     }
     
     @discardableResult
-    internal func deleteJSON(path: String,
+    public func deleteJSON(path: String,
                              baseURL: TwitterURL,
                              parameters: [String: Any],
                              success: JSONSuccessHandler?,
