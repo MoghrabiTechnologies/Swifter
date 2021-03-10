@@ -144,7 +144,7 @@ internal class OAuthClient: SwifterClientProtocol, SwifterAppProtocol {
         return request
     }
     
-    func authorizationHeader(for method: HTTPMethodType, url: URL, parameters: [String: Any], isMediaUpload: Bool) -> String {
+    public func authorizationHeader(for method: HTTPMethodType, url: URL, parameters: [String: Any], isMediaUpload: Bool) -> String {
         var authorizationParameters = [String: Any]()
         authorizationParameters["oauth_version"] = OAuth.version
         authorizationParameters["oauth_signature_method"] =  OAuth.signatureMethod
