@@ -32,10 +32,10 @@ public class OAuthClient: SwifterClientProtocol, SwifterAppProtocol {
         static let signatureMethod = "HMAC-SHA1"
     }
     
-    let consumerKey: String
-    let consumerSecret: String
+    public let consumerKey: String
+    public let consumerSecret: String
     
-    var credential: Credential?
+    public var credential: Credential?
     
     let dataEncoding: String.Encoding = .utf8
     
@@ -52,7 +52,7 @@ public class OAuthClient: SwifterClientProtocol, SwifterAppProtocol {
         self.credential = Credential(accessToken: credentialAccessToken)
     }
     
-    func get(_ path: String,
+    public func get(_ path: String,
              baseURL: TwitterURL,
              parameters: [String: Any],
              uploadProgress: HTTPRequest.UploadProgressHandler?,
@@ -72,7 +72,7 @@ public class OAuthClient: SwifterClientProtocol, SwifterAppProtocol {
         return request
     }
     
-    func post(_ path: String,
+    public func post(_ path: String,
               baseURL: TwitterURL,
               parameters: [String: Any],
               uploadProgress: HTTPRequest.UploadProgressHandler?,
@@ -127,7 +127,7 @@ public class OAuthClient: SwifterClientProtocol, SwifterAppProtocol {
         return request
     }
     
-    func delete(_ path: String,
+    public func delete(_ path: String,
                 baseURL: TwitterURL,
                 parameters: [String: Any],
                 success: HTTPRequest.SuccessHandler?,
